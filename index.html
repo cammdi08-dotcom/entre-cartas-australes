@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Entre Cartas Australes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- AVISO DE INSCRIPCIÓN -->
+    <header>
+        <p>INSCRIPCIONES ABIERTAS HASTA EL XX DE AGOSTO</p>
+    </header>
+
+
+    <!-- LOGO -->
+    <section>
+        <h1>Entre Cartas Australes</h1>
+        <p>MAIL CLUB</p>
+    </section>
+
+
+    <!-- FRASE DE BIENVENIDA -->
+    <section class="bienvenida">
+    <p>Una pequeña carta para encontrarte con algo lindo cada mes.</p>
+<<section class="seccion-info">
+    <h2>¿QUÉ ES EL MAIL CLUB?</h2>
+
+    <p>
+        Un pequeño envío mensual creado para disfrutar,
+        descubrir y recibir algo especial por correo.
+    </p>
+<section class="como-funciona">
+    <h2>¿CÓMO FUNCIONA?</h2>
+
+    <p>Te suscribís al Mail Club.</p>
+    <p>Preparo tu envío de este mes.</p>
+    <p>Recibís tu carta por correo.</p>
+
+    <p class="precio">Precio: $00.000</p>
+
+    <button>QUIERO SUSCRIBIRME</button>
+<section class="este-mes">
+    <h2>ESTE MES</h2>
+
+    <div class="foto-mes">
+        <p>FOTO DEL MAIL CLUB</p>
+    </div>
+
+    <p class="texto-mes">
+        Acá vas a poder contar qué pueden encontrar en la entrega de este mes.
+    </p>
+<section class="maquina-cartas">
+
+    <h2>LA MÁQUINA DE CARTAS</h2>
+
+    <div class="maquina">
+
+        <div class="hoja">
+            <p>Tu cartita podría aparecer aquí... 💗</p>
+        </div>
+
+        <div class="teclado">
+            <div class="tecla"></div>
+            <div class="tecla"></div>
+            <div class="tecla"></div>
+            <div class="tecla"></div>
+            <div class="tecla"></div>
+        </div>
+
+    </div>
+
+<section class="avatar-section">
+
+    <h2>¿FORMÁS PARTE DEL MAIL CLUB?</h2>
+
+    <p>
+        Creá tu personaje y dejá tu cartita.
+    </p>
+
+    <button id="abrir-avatar">CREAR MI PERSONAJE</button>
+
+    <div id="creador-avatar" class="creador-avatar">
+
+        <h3>CREÁ TU PERSONAJE</h3>
+
+       <div class="circulo-avatar">
+
+    <div class="avatar-interior">
+
+        <div class="pelo"></div>
+
+        <div class="cara">
+            <div class="ojos"></div>
+            <div class="cejas"></div>
+            <div class="boca boca-sonrisa"></div>
+        </div>
+
+        <div class="pelo-delantero"></div>
+
+
+    </div>
+
+</div>
+
+<div class="opciones-avatar">
+
+    <button id="boton-piel">PIEL</button>
+    <button id="boton-pelo">LARGO DEL PELO</button>
+<button id="boton-frente">PELO DELANTERO</button>
+<button id="boton-ojos">OJOS</button>
+    <button id="boton-cejas">CEJAS</button>
+    <button id="boton-boca">BOCA</button>
+
+</div>
+        
+
+<div class="datos-cartita">
+
+    <input 
+        type="text" 
+        id="nombre-cartita"
+        maxlength="30"
+        placeholder="Tu nombre (opcional)"
+    >
+
+    <input 
+        type="text" 
+        id="provincia-cartita"
+        maxlength="30"
+        placeholder="Tu provincia (opcional)"
+    >
+
+    <textarea 
+        id="texto-cartita"
+        maxlength="1500"
+        placeholder="Escribí tu cartita, reflexión, poema o lo que quieras compartir..."
+    ></textarea>
+
+    <div class="contador-cartita">
+        <span id="contador">0</span> / 1500
+    </div>
+
+    <button id="enviar-cartita">ENVIAR CARTITA</button>
+
+</div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ADMINISTRACIÓN -->
+
+<section class="administracion">
+
+    <h2>CARTITAS PENDIENTES</h2>
+
+    <div id="cartitas-pendientes">
+
+        <p>No hay cartitas pendientes.</p>
+
+    </div>
+
+</section>
+
+
+    <!-- MENSAJE FINAL -->
+    <section class="cierre">
+
+    <h2>Entre Cartas Australes</h2>
+
+    <p class="mensaje-final">
+        Gracias por ser parte de este pequeño mundo de cartas. 💗
+    </p>
+
+</section>
+
+<script>
+
+    const botonAvatar = document.getElementById("abrir-avatar");
+const creadorAvatar = document.getElementById("creador-avatar");
+
+const botonPiel = document.getElementById("boton-piel");
+const botonPelo = document.getElementById("boton-pelo");
+const botonFrente = document.getElementById("boton-frente");
+const botonOjos = document.getElementById("boton-ojos");
+const botonBoca = document.getElementById("boton-boca");
+const botonCejas = document.getElementById("boton-cejas");
+
+const cara = document.querySelector(".cara");
+
+
+/* ABRIR CREADOR */
+
+botonAvatar.addEventListener("click", function() {
+
+    creadorAvatar.style.display = "block";
+
+});
+
+
+/* PIEL */
+
+botonPiel.addEventListener("click", function() {
+
+    const tonos = [
+        "#f6d2bd",
+        "#e8b08d",
+        "#c98f6b",
+        "#a96f4f",
+        "#754936"
+    ];
+
+    let actual = Number(cara.dataset.tono || 0);
+
+    actual++;
+
+    if (actual >= tonos.length) {
+        actual = 0;
+    }
+
+    cara.style.backgroundColor = tonos[actual];
+
+    cara.dataset.tono = actual;
+
+});
+
+
+/* LARGO DEL PELO */
+
+botonPelo.addEventListener("click", function() {
+
+    const largos = [
+        "pelo-corto",
+        "pelo-medio",
+        "pelo-largo"
+    ];
+
+    let actual = Number(cara.dataset.largo || 0);
+
+    actual++;
+
+    if (actual >= largos.length) {
+        actual = 0;
+    }
+
+    cara.dataset.largo = actual;
+
+    const pelo = document.querySelector(".circulo-avatar .pelo");
+
+    pelo.className = "pelo " + largos[actual];
+
+});
+
+
+/* PELO DELANTERO */
+
+botonFrente.addEventListener("click", function() {
+
+const frentes = [
+    "frente-flequillo",
+    "frente-jopo",
+    "frente-dos-jopos",
+    "frente-dos-bolitas"
+];
+
+    let actual = Number(cara.dataset.frente || 0);
+
+    actual++;
+
+    if (actual >= frentes.length) {
+        actual = 0;
+    }
+
+    cara.dataset.frente = actual;
+
+    const peloDelantero = document.querySelector(".circulo-avatar .pelo-delantero");
+
+    peloDelantero.className = "pelo-delantero " + frentes[actual];
+
+});
+
+
+/* BOCA */
+
+botonBoca.addEventListener("click", function() {
+
+    const bocas = [
+        "boca-sonrisa",
+        "boca-pequena",
+        "boca-abierta",
+        "boca-recta",
+        "boca-beso"
+    ];
+
+    let actual = Number(cara.dataset.boca || 0);
+
+    const boca = document.querySelector(".circulo-avatar .boca");
+
+    actual++;
+
+    if (actual >= bocas.length) {
+        actual = 0;
+    }
+
+    boca.className = "boca " + bocas[actual];
+
+    cara.dataset.boca = actual;
+
+});
+
+
+
+/* CEJAS */
+
+botonCejas.addEventListener("click", function() {
+
+    const cejas = [
+        "cejas-normales",
+        "cejas-sorprendidas",
+        "cejas-enojadas",
+        "cejas-rectas"
+    ];
+
+    let actual = Number(cara.dataset.cejas || 0);
+
+    const cejasElemento = document.querySelector(".circulo-avatar .cejas");
+
+    actual++;
+
+    if (actual >= cejas.length) {
+        actual = 0;
+    }
+
+    cejasElemento.className = "cejas " + cejas[actual];
+
+    cara.dataset.cejas = actual;
+
+});
+
+
+/* OJOS */
+
+botonOjos.addEventListener("click", function() {
+
+    const ojos = [
+        "ojos-redondos",
+        "ojos-kawaii",
+        "ojos-guino"
+    ];
+
+    let actual = Number(cara.dataset.ojos || 0);
+
+    actual++;
+
+    if (actual >= ojos.length) {
+        actual = 0;
+    }
+
+    cara.classList.remove(
+        "ojos-redondos",
+        "ojos-kawaii",
+        "ojos-guino"
+    );
+
+    cara.classList.add(ojos[actual]);
+
+    cara.dataset.ojos = actual;
+
+});
+
+
+const textoCartita = document.getElementById("texto-cartita");
+const contador = document.getElementById("contador");
+
+textoCartita.addEventListener("input", function() {
+    contador.textContent = textoCartita.value.length;
+});
+
+
+const botonEnviar = document.getElementById("enviar-cartita");
+
+botonEnviar.addEventListener("click", function() {
+
+    const mensaje = document.createElement("p");
+
+    mensaje.textContent = "💗 Tu cartita fue enviada. Gracias por compartirla.";
+
+    mensaje.className = "mensaje-enviado";
+
+    botonEnviar.parentNode.appendChild(mensaje);
+
+});
+
+
+
+</script>
+</body>
+</html>

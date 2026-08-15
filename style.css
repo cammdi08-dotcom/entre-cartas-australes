@@ -1,0 +1,870 @@
+body {
+    background-color: white;
+    color: #e98aaa;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f5a0bd;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.logo-section p {
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-top: 0;
+}
+
+.bienvenida {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.bienvenida p {
+    font-size: 22px;
+    font-style: italic;
+    max-width: 650px;
+    margin: auto;
+}
+
+.seccion-info {
+    background-color: #fff7fa;
+    border: 2px solid #f5a0bd;
+    border-radius: 25px;
+    padding: 35px 30px;
+    margin: 30px auto;
+    max-width: 700px;
+}
+
+.seccion-info h2 {
+    margin-top: 0;
+}
+
+.como-funciona {
+    padding: 40px 30px;
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+.como-funciona p {
+    margin: 12px 0;
+}
+
+.como-funciona .precio {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.como-funciona button {
+    background-color: #f5a0bd;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.este-mes {
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+.foto-mes {
+    width: 100%;
+    min-height: 350px;
+    border: 2px solid #f5a0bd;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff7fa;
+}
+
+.foto-mes p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.texto-mes {
+    margin-top: 25px;
+}
+.maquina-cartas {
+    padding: 50px 20px;
+    margin: 50px auto;
+    max-width: 750px;
+}
+
+.maquina {
+    position: relative;
+    margin: 50px auto;
+    max-width: 620px;
+    min-height: 420px;
+    background-color: white;
+    border: 4px solid #f5a0bd;
+    border-radius: 35px 35px 20px 20px;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+.hoja {
+    background-color: white;
+    border: 3px solid #f5a0bd;
+    border-radius: 5px;
+    width: 72%;
+    min-height: 280px;
+    margin: 0 auto;
+    padding: 35px 25px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+.hoja p {
+    color: #e98aaa;
+    font-size: 18px;
+    margin: 0;
+}
+
+.teclado {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.tecla {
+    width: 42px;
+    height: 32px;
+    background-color: white;
+    border: 3px solid #f5a0bd;
+    border-radius: 50%;
+}
+
+
+.avatar-section {
+    padding: 30px 20px 60px;
+}
+
+.avatar-section p {
+    margin-bottom: 20px;
+}
+
+.avatar-section button {
+    background-color: #f5a0bd;
+    color: white;
+    border: 2px solid #e98aaa;
+    border-radius: 25px;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cierre {
+    padding: 70px 20px;
+    margin-top: 50px;
+    border-top: 2px solid #f5a0bd;
+}
+
+.mensaje-final {
+    max-width: 600px;
+    margin: 20px auto 0;
+    font-size: 19px;
+}
+.creador-avatar {
+    display: none;
+    margin: 35px auto;
+    padding: 30px;
+    max-width: 600px;
+    background-color: #fff7fa;
+    border: 2px solid #f5a0bd;
+    border-radius: 25px;
+}
+
+.creador-avatar h3 {
+    color: #e98aaa;
+}
+
+.cara {
+    width: 180px;
+    height: 180px;
+    border: 3px solid #f5a0bd;
+    border-radius: 50%;
+    margin: 25px auto;
+    background-color: white;
+    position: relative;
+}
+
+.opciones-avatar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.opciones-avatar button {
+    background-color: white;
+    color: #e98aaa;
+    border: 2px solid #f5a0bd;
+    border-radius: 20px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.creador-avatar textarea {
+    width: 100%;
+    min-height: 100px;
+    box-sizing: border-box;
+    border: 2px solid #f5a0bd;
+    border-radius: 15px;
+    padding: 12px;
+    resize: none;
+    font-family: inherit;
+}
+.cara {
+    width: 150px;
+    height: 150px;
+    background: white;
+    border: 3px solid #f5a0bd;
+    border-radius: 50%;
+    margin: 25px auto;
+    position: relative;
+    overflow: visible;
+}
+
+.cara::before {
+    content: "";
+    position: absolute;
+    background-color: #e98aaa;
+}
+
+/* PELO CORTO */
+.pelo-corto::before {
+    width: 150px;
+    height: 80px;
+    top: -5px;
+    left: 15px;
+    border-radius: 80px 80px 30px 30px;
+}
+
+/* PELO LARGO */
+.pelo-largo::before {
+    width: 170px;
+    height: 190px;
+    top: -5px;
+    left: 5px;
+    border-radius: 85px 85px 35px 35px;
+}
+
+/* CARRÉ */
+.pelo-carré::before {
+    width: 165px;
+    height: 145px;
+    top: -5px;
+    left: 8px;
+    border-radius: 80px 80px 20px 20px;
+}
+
+/* DOS COLITAS */
+.pelo-colitas::before {
+    width: 150px;
+    height: 75px;
+    top: 0;
+    left: 15px;
+    border-radius: 80px;
+}
+
+/* ONDULADO */
+.pelo-ondulado::before {
+    width: 175px;
+    height: 125px;
+    top: -5px;
+    left: 2px;
+    border-radius: 50%;
+}
+
+/* FLEQUILLO */
+.pelo-flequillo::before {
+    width: 160px;
+    height: 90px;
+    top: -5px;
+    left: 10px;
+    border-radius: 80px 80px 45px 45px;
+}
+
+/* MELENITA */
+.pelo-melenita::before {
+    width: 170px;
+    height: 155px;
+    top: -5px;
+    left: 5px;
+    border-radius: 85px 85px 40px 40px;
+}
+
+/* DOS COLETAS */
+.pelo-dos-coletas::before {
+    width: 155px;
+    height: 85px;
+    top: -5px;
+    left: 12px;
+    border-radius: 80px;
+}
+.cara::after {
+    content: "•   •";
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e98aaa;
+    font-size: 32px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.ojos-grandes::after {
+    content: "●   ●";
+    font-size: 34px;
+}
+
+.ojos-cerrados::after {
+    content: "⌒   ⌒";
+    font-size: 30px;
+}
+
+.ojos-brillantes::after {
+    content: "✦   ✦";
+    font-size: 28px;
+}
+
+.ojos-curiosos::after {
+    content: "◕   ◕";
+    font-size: 30px;
+}
+
+.ojos-kawaii::after {
+    content: "♡   ♡";
+    font-size: 34px;
+}
+
+.ojos-dulces::after {
+    content: "｡   ｡";
+    font-size: 32px;
+}
+/* AVATAR - BASE */
+
+.circulo-avatar {
+    width: 190px;
+    height: 190px;
+    background: white;
+    border: 3px solid #f5a0bd;
+    border-radius: 50%;
+    margin: 25px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* PELO BASE */
+
+.circulo-avatar .pelo {
+    position: absolute;
+    background: #e98aaa;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 135px;
+    height: 155px;
+    border-radius: 70px 70px 40px 40px;
+}
+
+/* PELO CORTITO */
+
+.circulo-avatar .pelo.pelo-corto {
+    width: 125px;
+    height: 135px;
+    border-radius: 65px 65px 30px 30px;
+}
+
+
+/* PELO HASTA LOS HOMBROS */
+
+.circulo-avatar .pelo.pelo-medio {
+    width: 135px;
+    height: 165px;
+    border-radius: 68px 68px 35px 35px;
+}
+
+
+/* PELO LARGO */
+
+.circulo-avatar .pelo.pelo-largo {
+    width: 140px;
+    height: 180px;
+    border-radius: 70px 70px 40px 40px;
+}
+
+/* PELO CORTO */
+
+.circulo-avatar .pelo.pelo-corto {
+    width: 130px;
+    height: 130px;
+    border-radius: 65px 65px 30px 30px;
+}
+
+/* PELO HASTA LOS HOMBROS */
+
+.circulo-avatar .pelo.pelo-largo {
+    width: 135px;
+    height: 175px;
+    border-radius: 65px 65px 35px 35px;
+}
+
+/* CARRÉ */
+
+.circulo-avatar .pelo.pelo-carré {
+    width: 135px;
+    height: 145px;
+    border-radius: 65px 65px 25px 25px;
+}
+
+/* COLITAS */
+
+.circulo-avatar .pelo.pelo-colitas {
+    width: 125px;
+    height: 135px;
+    border-radius: 60px;
+}
+
+/* ONDULADO */
+
+.circulo-avatar .pelo.pelo-ondulado {
+    width: 140px;
+    height: 165px;
+    border-radius: 65px 65px 45px 45px;
+}
+
+/* FLEQUILLO */
+
+.circulo-avatar .pelo.pelo-flequillo {
+    width: 135px;
+    height: 145px;
+    border-radius: 65px 65px 30px 30px;
+}
+
+/* MELENITA */
+
+.circulo-avatar .pelo.pelo-melenita {
+    width: 135px;
+    height: 155px;
+    border-radius: 65px 65px 40px 40px;
+}
+
+/* DOS COLETAS */
+
+.circulo-avatar .pelo.pelo-dos-coletas {
+    width: 125px;
+    height: 140px;
+    border-radius: 60px;
+}
+/* CARA */
+
+.circulo-avatar .cara {
+    width: 120px;
+    height: 120px;
+    background: #f6d2bd;
+    border: 3px solid #f5a0bd;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+/* OJOS */
+
+.circulo-avatar .cara::after {
+    content: "•        •";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e98aaa;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: pre;
+}
+
+/* OJOS GUIÑANDO */
+
+.circulo-avatar .cara.ojos-guino::after {
+    content: "•        <";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e98aaa;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: pre;
+}
+
+
+/* OJOS KAWAII */
+
+.circulo-avatar .cara.ojos-kawaii::after {
+    content: "⌒        ⌒";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e98aaa;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: pre;
+}
+
+
+
+/* BOCAS */
+
+.circulo-avatar .boca {
+    position: absolute;
+    z-index: 15;
+    color: #e98aaa;
+    left: 50%;
+    top: 69px;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+
+/* 1 — SONRISA */
+
+.circulo-avatar .boca.boca-sonrisa::after {
+    content: "⌣";
+    font-size: 28px;
+    position: relative;
+    top: -3px;
+}
+
+
+/* 2 — BOQUITA PEQUEÑA */
+
+.circulo-avatar .boca.boca-pequena::after {
+    content: "•";
+    font-size: 18px;
+}
+
+
+/* 3 — SONRISA ABIERTA */
+
+.circulo-avatar .boca.boca-abierta::after {
+    content: "◡";
+    font-size: 25px;
+    position: relative;
+    top: -3px;
+}
+
+
+/* 4 — LÍNEA RECTITA */
+
+.circulo-avatar .boca.boca-recta::after {
+    content: "—";
+    font-size: 18px;
+}
+
+
+/* 5 — BOQUITA DE BESO */
+
+.circulo-avatar .boca.boca-beso::after {
+    content: "3";
+    font-size: 22px;
+}
+
+
+/* CEJAS */
+
+.circulo-avatar .cara .cejas {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: 25px;
+    left: 0;
+    z-index: 10;
+}
+
+
+/* CEJAS NORMALES */
+
+.circulo-avatar .cara .cejas.cejas-normales::before {
+    transform: rotate(0deg);
+}
+
+
+
+/* CEJAS SORPRENDIDAS */
+
+.circulo-avatar .cara .cejas.cejas-sorprendidas::before,
+.circulo-avatar .cara .cejas.cejas-sorprendidas::after {
+    top: -5px;
+    transform: rotate(0deg);
+}
+
+
+/* CEJAS ENOJADAS */
+
+.circulo-avatar .cara .cejas.cejas-enojadas::before {
+    transform: rotate(25deg);
+}
+
+.circulo-avatar .cara .cejas.cejas-enojadas::after {
+    transform: rotate(-25deg);
+}
+
+
+
+/* CEJAS NORMALES */
+
+.circulo-avatar .cara .cejas.cejas-normales::before {
+    transform: rotate(0deg);
+}
+
+.circulo-avatar .cara .cejas.cejas-normales::after {
+    transform: rotate(0deg);
+}
+
+
+/* CEJAS SORPRENDIDAS */
+
+.circulo-avatar .cara .cejas.cejas-sorprendidas::before {
+    content: "⌒";
+    transform: rotate(0deg);
+    font-size: 18px;
+}
+
+.circulo-avatar .cara .cejas.cejas-sorprendidas::after {
+    content: "⌒";
+    transform: rotate(0deg);
+    font-size: 18px;
+}
+
+
+/* CEJAS ENOJADAS */
+
+.circulo-avatar .cara .cejas.cejas-enojadas::before {
+    transform: rotate(25deg);
+}
+
+.circulo-avatar .cara .cejas.cejas-enojadas::after {
+    transform: rotate(-25deg);
+}
+
+
+/* CEJA ASIMÉTRICA */
+
+.circulo-avatar .cara .cejas.cejas-rectas::before {
+    transform: rotate(0deg);
+}
+
+.circulo-avatar .cara .cejas.cejas-rectas::after {
+    transform: rotate(-18deg);
+}
+
+
+
+
+/* CEJA IZQUIERDA */
+
+.circulo-avatar .cara .cejas::before {
+    content: "━";
+    position: absolute;
+    left: 22px;
+    top: 0;
+    color: #e98aaa;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* CEJA DERECHA */
+
+.circulo-avatar .cara .cejas::after {
+    content: "━";
+    position: absolute;
+    right: 22px;
+    top: 0;
+    color: #e98aaa;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+/* PELO DELANTERO */
+
+
+
+/* PELO DELANTERO */
+
+.circulo-avatar .pelo-delantero {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #e98aaa;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 20;
+}
+
+/* FLEQUILLO */
+
+.circulo-avatar .pelo-delantero.frente-flequillo {
+    width: 105px;
+    height: 35px;
+    top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 55px 55px 12px 12px;
+}
+
+
+/* JOPO A UN COSTADO */
+
+.circulo-avatar .pelo-delantero.frente-jopo {
+    width: 30px;
+    height: 58px;
+    top: 45px;
+    left: 37%;
+    transform: rotate(-18deg);
+    border-radius: 50% 50% 30% 40%;
+}
+
+
+.circulo-avatar .pelo-delantero.frente-dos-jopos::after {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background: #e98aaa;
+    left: 27px;
+    top: 0;
+    border-radius: 50%;
+}
+
+
+
+.circulo-avatar .pelo-delantero.frente-dos-jopos::after {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 52px;
+    background: #e98aaa;
+    left: 40px;
+    top: 0;
+    border-radius: 55% 55% 35% 35%;
+    transform: rotate(16deg);
+}
+
+.circulo-avatar .pelo-delantero.frente-dos-jopos::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 58px;
+    background: #e98aaa;
+    left: 56px;
+    top: 0;
+    border-radius: 50% 50% 40% 30%;
+    transform: rotate(20deg);
+}
+
+/* DOS BOLITAS */
+
+.circulo-avatar .pelo-delantero.frente-dos-bolitas {
+    width: 36px;
+    height: 36px;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-36px);
+    background: #e98aaa;
+    border-radius: 50%;
+}
+
+.circulo-avatar .pelo-delantero.frente-dos-bolitas::after {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: #e98aaa;
+    left: 36px;
+    top: 0;
+    border-radius: 50%;
+}
+
+
+
+.circulo-avatar .pelo-delantero.frente-dos-bolitas::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #e98aaa;
+    left: 30px;
+    top: 0;
+    border-radius: 50%;
+}
+
+
+/* CORRECCIÓN FINAL */
+.circulo-avatar .cara {
+    background: #f6d2bd;
+}
