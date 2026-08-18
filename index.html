@@ -60,7 +60,7 @@
     <input type="text" id="provincia" placeholder="Provincia" required>
     <input type="text" id="codigo_postal" placeholder="Código postal" required>
 
-    <button id="continuar-pago">CONTINUAR AL PAGO</button>
+
 
 </div>
     
@@ -418,6 +418,32 @@ botonEnviar.addEventListener("click", function() {
 
 });
 
+
+const botonSuscripcion = document.getElementById("abrir-suscripcion");
+const formularioSuscripcion = document.getElementById("formulario-suscripcion");
+
+let formularioAbierto = false;
+
+botonSuscripcion.addEventListener("click", function () {
+    if (!formularioAbierto) {
+        formularioSuscripcion.style.display = "block";
+        formularioAbierto = true;
+        return;
+    }
+
+    const campos = formularioSuscripcion.querySelectorAll("input[required]");
+
+    for (const campo of campos) {
+        if (!campo.value.trim()) {
+            campo.focus();
+            alert("Por favor completá todos los campos.");
+            return;
+        }
+    }
+
+    alert("Formulario completo.");
+});
+    
 
 
 </script>
