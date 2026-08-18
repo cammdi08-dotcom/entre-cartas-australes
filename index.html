@@ -424,7 +424,7 @@ const formularioSuscripcion = document.getElementById("formulario-suscripcion");
 
 let formularioAbierto = false;
 
-botonSuscripcion.addEventListener("click", function () {
+    botonSuscripcion.addEventListener("click", async function () {
     if (!formularioAbierto) {
         formularioSuscripcion.style.display = "block";
         formularioAbierto = true;
