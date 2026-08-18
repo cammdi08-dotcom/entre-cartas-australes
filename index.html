@@ -419,24 +419,22 @@ botonEnviar.addEventListener("click", function() {
 });
 
 
-const botonSuscripcion = document.getElementById("abrir-suscripcion");
+
+
+    const botonSuscripcion = document.getElementById("abrir-suscripcion");
 const formularioSuscripcion = document.getElementById("formulario-suscripcion");
 
 let formularioAbierto = false;
 
-    botonSuscripcion.addEventListener("click", async function () {
+botonSuscripcion.addEventListener("click", async function () {
 
-    // PRIMER CLIC: mostrar formulario
     if (!formularioAbierto) {
         formularioSuscripcion.style.display = "block";
         formularioAbierto = true;
-
         botonSuscripcion.textContent = "CONTINUAR →";
-
         return;
     }
 
-    // SEGUNDO CLIC: comprobar formulario
     const campos = formularioSuscripcion.querySelectorAll("input[required]");
 
     for (const campo of campos) {
@@ -447,9 +445,7 @@ let formularioAbierto = false;
         }
     }
 
-    // FORMULARIO COMPLETO: ir a Mercado Pago
     try {
-
         botonSuscripcion.disabled = true;
         botonSuscripcion.textContent = "CARGANDO...";
 
@@ -472,7 +468,7 @@ let formularioAbierto = false;
                     localidad: document.getElementById("localidad").value,
                     provincia: document.getElementById("provincia").value,
                     codigo_postal: document.getElementById("codigo_postal").value
-                }
+                })
             }
         );
 
@@ -487,7 +483,6 @@ let formularioAbierto = false;
         window.location.href = resultado.init_point;
 
     } catch (error) {
-
         console.error(error);
 
         botonSuscripcion.disabled = false;
