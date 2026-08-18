@@ -441,7 +441,44 @@ botonSuscripcion.addEventListener("click", function () {
         }
     }
 
-    alert("Formulario completo.");
+try {
+    const respuesta = await fetch(
+        "https://ljkcsywyzhpjhgqaflxn.supabase.co/functions/v1/crear-suscripcion",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nombre: document.getElementById("nombre").value,
+                apellido: document.getElementById("apellido").value,
+                email: document.getElementById("email").value,
+                celular: document.getElementById("celular").value,
+                calle: document.getElementById("calle").value,
+                numero: document.getElementById("numero").value,
+                piso: document.getElementById("piso").value,
+                departamento: document.getElementById("departamento").value,
+                localidad: document.getElementById("localidad").value,
+                provincia: document.getElementById("provincia").value,
+                codigo_postal: document.getElementById("codigo_postal").value
+            }
+        }
+    );
+
+    const resultado = await respuesta.json();
+
+    if (!respuesta.ok || !resultado.init_point) {
+        throw new Error(resultado.error || "No se pudo iniciar la suscripción.");
+    }
+
+    window.location.href = resultado.init_point;
+
+} catch (error) {
+    console.error(error);
+    alert("No pudimos iniciar la suscripción. Intentá nuevamente.");
+}
+    
+    
 });
     
 
