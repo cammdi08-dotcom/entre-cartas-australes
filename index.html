@@ -425,11 +425,78 @@ const formularioSuscripcion = document.getElementById("formulario-suscripcion");
 let formularioAbierto = false;
 
     botonSuscripcion.addEventListener("click", async function () {
+
+    // PRIMER CLIC: mostrar formulario
     if (!formularioAbierto) {
         formularioSuscripcion.style.display = "block";
         formularioAbierto = true;
+
+        botonSuscripcion.textContent = "CONTINUAR →";
+
         return;
     }
+
+    // SEGUNDO CLIC: comprobar formulario
+    const campos = formularioSuscripcion.querySelectorAll("input[required]");
+
+    for (const campo of campos) {
+        if (!campo.value.trim()) {
+            campo.focus();
+            alert("Por favor completá todos los campos.");
+            return;
+        }
+    }
+
+    // FORMULARIO COMPLETO: ir a Mercado Pago
+    try {
+
+        botonSuscripcion.disabled = true;
+        botonSuscripcion.textContent = "CARGANDO...";
+
+        const respuesta = await fetch(
+            "https://ljkcsywyzhpjhgqaflxn.supabase.co/functions/v1/crear-suscripcion",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nombre: document.getElementById("nombre").value,
+                    apellido: document.getElementById("apellido").value,
+                    email: document.getElementById("email").value,
+                    celular: document.getElementById("celular").value,
+                    calle: document.getElementById("calle").value,
+                    numero: document.getElementById("numero").value,
+                    piso: document.getElementById("piso").value,
+                    departamento: document.getElementById("departamento").value,
+                    localidad: document.getElementById("localidad").value,
+                    provincia: document.getElementById("provincia").value,
+                    codigo_postal: document.getElementById("codigo_postal").value
+                }
+            }
+        );
+
+        const resultado = await respuesta.json();
+
+        if (!respuesta.ok || !resultado.init_point) {
+            throw new Error(
+                resultado.error || "No se pudo iniciar la suscripción."
+            );
+        }
+
+        window.location.href = resultado.init_point;
+
+    } catch (error) {
+
+        console.error(error);
+
+        botonSuscripcion.disabled = false;
+        botonSuscripcion.textContent = "CONTINUAR →";
+
+        alert("No pudimos iniciar la suscripción. Intentá nuevamente.");
+    }
+
+});
 
     const campos = formularioSuscripcion.querySelectorAll("input[required]");
 
